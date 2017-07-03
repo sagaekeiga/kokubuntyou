@@ -5,7 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :name,              null: false, default: ""
       t.string :genre,              null: false, default: ""
       t.string :contact,              null: false, default: ""
-      t.string :adress,              null: false, default: ""
+      t.string :address,              null: false, default: ""
       t.string :sales,              null: false, default: ""
       t.string :budget,              null: false, default: ""
       t.string :seat,              null: false, default: ""
