@@ -8,19 +8,14 @@
 </head>
 <body>
     <header>
-        <nav>
-            <% if user_signed_in? %>
-                <strong><%= link_to "マイページ", users_show_path %></strong>
-                <%= link_to 'プロフィール変更', edit_user_registration_path %>
-                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-            <% else %>
-                <%= link_to 'サインアップ', new_user_registration_path %>
-                <%= link_to 'ログイン', new_user_session_path %>
-            <% end %>
-        </nav>
-    </header>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+        <%= render 'layouts/header' %>
+    </header><br>
+    <% if !notice.nil? || !alert.nil? %>
+      <div class="ui green message" style="text-align:center;">
+        <div class="notice"><%= notice %></div>
+        <div class="alert"><%= alert %></div>
+      </div>
+    <% end %>
 <%= yield %>
 
 </body>

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170703090907) do
     t.string   "name",                   default: "", null: false
     t.string   "genre",                  default: "", null: false
     t.string   "contact",                default: "", null: false
-    t.string   "adress",                 default: "", null: false
+    t.string   "address",                default: "", null: false
     t.string   "sales",                  default: "", null: false
     t.string   "budget",                 default: "", null: false
     t.string   "seat",                   default: "", null: false

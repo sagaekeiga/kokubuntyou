@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  
+  root 'pages#index'
   get 'users/show'
 
-  devise_for :users
-  root 'pages#index'
-  
+  devise_for :users, :controllers => {
+ :registrations => 'users/registrations'
+}
+
   namespace :api, { format: 'json' } do
     namespace :v1, { format: 'json' } do
       post 'users/detail'

@@ -33,6 +33,8 @@ gem 'mysql2'
 gem "ransack"
 gem 'devise'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+gem 'devise-i18n-views'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,2 +1,96 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="ui grid">
+  <div class="sixteen wide column"></div>
+  <div class="ten wide column">
+    <div class="edit">
+        <h3>店内イメージ動画</h3>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/<%= @user.instore %>" frameborder="0" allowfullscreen></iframe>
+        <h3>店内案内動画</h3>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/<%= @user.guide %>" frameborder="0" allowfullscreen></iframe>
+        
+        <table class="ui celled striped table">
+          <thead>
+            <tr><th colspan="3">
+              詳細情報
+            </th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td class="collapsing">
+                店舗名
+              </td>
+              <td><%= @user.name %></td>
+            </tr>
+            <tr>
+              <td class="collapsing">
+                ジャンル
+              </td>
+              <td><%= @user.genre %></td>
+            </tr>
+            <tr>
+              <td>
+                お問い合わせ
+              </td>
+              <td><%= @user.contact %></td>
+            </tr>
+            <tr>
+              <td>
+                住所
+              </td>
+              <td><%= @user.address %></td>
+            </tr>
+            <tr>
+              <td>
+                営業時間
+              </td>
+              <td><%= @user.sales %></td>
+            </tr>
+            <tr>
+              <td>
+                予算
+              </td>
+              <td><%= @user.budget %></td>
+            </tr>
+            <tr>
+              <td>
+                席数
+              </td>
+              <td><%= @user.seat %></td>
+            </tr>
+            <tr>
+              <td>
+                禁煙
+              </td>
+              <td><%= @user.smoke %></td>
+            </tr>
+            <tr>
+              <td>
+                HP
+              </td>
+              <td><%= link_to "#{@user.web}", "#{@user.web}" %></td>
+            </tr>
+            <tr>
+              <td>
+                備考
+              </td>
+              <td><%= @user.remarks %></td>
+            </tr>
+            <tr>
+              <td>
+                メール
+              </td>
+              <td><%= @user.email %></td>
+            </tr>
+            <tr>
+              <td>
+                管理
+              </td>
+             <td>
+              <%= link_to "店舗情報変更", edit_user_registration_path(@user.id), :class => "ui teal button" %>
+             </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="six wide column"></div>
+</div>

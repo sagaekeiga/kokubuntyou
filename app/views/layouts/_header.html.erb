@@ -1,0 +1,13 @@
+<div class="ui segment">
+  <h3 class="ui right aligned header">
+        <nav>
+            <% if user_signed_in? %>
+                <strong><%= link_to "マイページ", users_show_path, :class => "ui yellow button" %></strong>
+                <%= link_to '店舗情報変更', edit_user_registration_path, :class => "ui teal button" %>
+            <% else %>
+                <%= link_to 'サインアップ', new_user_registration_path %>
+                <%= link_to 'ログイン', new_user_session_path %>
+            <% end %>
+        </nav>
+  </h3>
+</div>
