@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  
+  get 'users/show'
+
+  devise_for :users
+  root 'pages#index'
+  
+  namespace :api, { format: 'json' } do
+    namespace :v1, { format: 'json' } do
+      post 'users/detail'
+      resources :users, :only => [:index]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

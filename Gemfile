@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'mysql2'
 gem "ransack"
+gem 'devise'
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
