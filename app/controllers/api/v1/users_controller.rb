@@ -13,7 +13,7 @@ module Api
          logger.debug("params")
          logger.debug(params)
          logger.debug("params")
-         @user = User.find_by(name: params)
+         @user = User.find_by(email: params)
          render json: @user
       end
         
