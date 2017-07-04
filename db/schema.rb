@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170703090907) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
+    t.string   "image",                  default: "", null: false
     t.string   "genre",                  default: "", null: false
     t.string   "contact",                default: "", null: false
     t.string   "address",                default: "", null: false

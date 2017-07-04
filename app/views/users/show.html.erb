@@ -16,6 +16,12 @@
           <tbody>
             <tr>
               <td class="collapsing">
+                店舗画像
+              </td>
+              <td><%= image_tag(@user.image, :class => "ui fluid image") if !@user.image.nil? %></td>
+            </tr>
+            <tr>
+              <td class="collapsing">
                 店舗名
               </td>
               <td><%= @user.name %></td>
@@ -27,7 +33,7 @@
               <td><%= @user.genre %></td>
             </tr>
             <tr>
-              <td>
+              <td class="collapsing">
                 お問い合わせ
               </td>
               <td><%= @user.contact %></td>

@@ -3,6 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       ## Database authenticatable
       t.string :name,              null: false, default: ""
+      t.string :image,              null: false, default: ""
       t.string :genre,              null: false, default: ""
       t.string :contact,              null: false, default: ""
       t.string :address,              null: false, default: ""
